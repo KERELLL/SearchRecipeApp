@@ -9,6 +9,7 @@ import android.widget.Toast
 import androidx.core.view.isVisible
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.searchrecipeapp.R
@@ -31,18 +32,23 @@ class MainFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentMainBinding.inflate(layoutInflater)
+
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         viewModel = ViewModelProvider(this)[SearchRecipesViewModel::class.java]
+        val calories = "" + args.min + "-" + args.max
 
         binding.progressBar.isVisible = false
-        val calories = "" + args.min + "-" + args.max
         viewModel.getRecipesSearch(args.ingredients, app_key, app_id, calories)
 
         recyclerViewAdapter = RecyclerViewAdapter(requireContext()){
-
+            val action = MainFragmentDirections.actionMainFragmentToRecipeDetailsFragment(it,
+            args.ingredients,
+            args.min,
+            args.max)
+            findNavController().navigate(action)
         }
 
         binding.recyclerView.adapter = recyclerViewAdapter

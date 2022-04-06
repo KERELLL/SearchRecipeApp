@@ -11,7 +11,11 @@
         tools:layout="@layout/fragment_search" >
         <action
             android:id="@+id/action_searchFragment_to_mainFragment"
-            app:destination="@id/mainFragment" />
+            app:destination="@id/mainFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
     </fragment>
 
     <fragment
@@ -28,5 +32,34 @@
         <argument
             android:name="Max"
             app:argType="integer" />
+        <action
+            android:id="@+id/action_mainFragment_to_recipeDetailsFragment"
+            app:destination="@id/recipeDetailsFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/recipeDetailsFragment"
+        android:name="com.example.searchrecipeapp.ui.RecipeDetailsFragment"
+        android:label="fragment_recipe_details"
+        tools:layout="@layout/fragment_recipe_details" >
+        <argument
+            android:name="recipeDetails"
+            app:argType="com.example.searchrecipeapp.ui.models.Recipe" />
+
+        <argument
+            android:name="Ingredients"
+            app:argType="string" />
+        <argument
+            android:name="Min"
+            app:argType="integer" />
+        <argument
+            android:name="Max"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_recipeDetailsFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
     </fragment>
 </navigation>
