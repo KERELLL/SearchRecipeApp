@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "858181644346",
+    "project_id": "easyfit-bd843",
+    "storage_bucket": "easyfit-bd843.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:858181644346:android:add793b4e726204177c503",
+        "android_client_info": {
+          "package_name": "com.example.searchrecipeapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "858181644346-94arccnucrbf75mrfdsk1crvju53cr06.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.searchrecipeapp",
+            "certificate_hash": "867f32994a77e7ff6d7b441e309651d018d0e9cc"
+          }
+        },
+        {
+          "client_id": "858181644346-e7dj7ks60k1fgi1lthl3lnemrghufoed.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDDl9qZxRp4db_bdxGKkld25yP_RhJN-Vc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "858181644346-e7dj7ks60k1fgi1lthl3lnemrghufoed.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
