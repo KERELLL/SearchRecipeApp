@@ -56,7 +56,7 @@ class MainFragment : Fragment() {
 
         binding.createProjectButton.setOnClickListener {
             val ingredients = binding.editTextSearch.text.toString()
-            viewModel.getRecipesSearch(args.ingredients, app_key, app_id, calories)
+            viewModel.getRecipesSearch(ingredients, app_key, app_id, calories)
         }
         subscribeSearchRecipes()
     }
